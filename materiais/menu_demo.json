@@ -1,0 +1,12 @@
+{
+  "origem": "synthetic",
+  "unidade": "DEMO-01",
+  "itens": [
+    {
+      "id": "prato-1",
+      "nome": "Prato didático",
+      "preco_centavos": 2590,
+      "disponivel": true
+    }
+  ]
+}

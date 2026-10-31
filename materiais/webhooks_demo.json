@@ -1,0 +1,17 @@
+[
+  {
+    "id": "evt-demo-1",
+    "tipo": "pedido.confirmado",
+    "origem": "synthetic"
+  },
+  {
+    "id": "evt-demo-1",
+    "tipo": "pedido.confirmado",
+    "origem": "synthetic"
+  },
+  {
+    "id": "evt-demo-2",
+    "tipo": "assinatura.atualizada",
+    "origem": "synthetic"
+  }
+]

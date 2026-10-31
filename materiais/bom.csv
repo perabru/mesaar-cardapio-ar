@@ -1,0 +1,8 @@
+item,quantidade_planejada,papel,etapa,compatibilidade,modelo_confirmado,preco_cotado_brl,origem_cotacao,data_cotacao
+Computador para web e modelagem,1,"API, menu, assets e testes",Essencial,8 a 16 GB de RAM como referência de exercícios pequenos.,,,,
+Android compatível com ARCore,1,Homologar Scene Viewer ou WebXR,Teste,Conferir a lista de suporte e registrar versão do sistema.,,,,
+iPhone ou iPad compatível,1,Homologar Quick Look,Teste,"Registrar aparelho, versão e formato testado.",,,,
+Câmera ou smartphone de captura,1,Capturar os pratos reais autorizados,Captura,,,,,
+"Tripé, iluminação difusa e régua",1 conjunto,Captura consistente e escala,Captura,Registrar dimensão física de referência de cada prato.,,,,
+Prato e ficha validados pela cozinha,Por item,"Conferir aparência, ingredientes e disponibilidade",Captura,A ficha real é aprovada pelo restaurante.,,,,
+Mesa giratória,1,Facilitar séries de captura,Opcional,,,,,

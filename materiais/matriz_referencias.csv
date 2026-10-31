@@ -1,0 +1,20 @@
+id,titulo,autor_instituicao,ano,url,acesso_em,afirmacao_sustentada,limite,licenca
+git,Pro Git em português,Git / autores do Pro Git,,https://git-scm.com/book/pt-br/v2,2026-10-31,,,Leitura gratuita
+mdn,Aprendendo desenvolvimento web,MDN Web Docs,,https://developer.mozilla.org/pt-BR/docs/Learn_web_development,2026-10-31,,,Leitura gratuita
+react,React: primeiros componentes,React,,https://react.dev/learn,2026-10-31,,,Leitura gratuita
+ts,TypeScript Handbook,TypeScript / Microsoft,,https://www.typescriptlang.org/docs/handbook/intro.html,2026-10-31,,,Leitura gratuita
+nest,NestJS: fundamentos,NestJS,,https://docs.nestjs.com/,2026-10-31,,,Leitura gratuita
+postgres,PostgreSQL: tutorial,PostgreSQL Global Development Group,,https://www.postgresql.org/docs/current/tutorial.html,2026-10-31,,,Leitura gratuita
+oidc,Autenticação com OpenID Connect,Keycloak,,https://www.keycloak.org/securing-apps/oidc-layers,2026-10-31,,,Leitura gratuita
+blender,Blender: manual glTF 2.0,Blender,,https://docs.blender.org/manual/en/latest/addons/import_export/scene_gltf2.html,2026-10-31,,,Leitura gratuita
+gltf,Registro oficial glTF,Khronos Group,,https://registry.khronos.org/glTF/,2026-10-31,,,Leitura gratuita
+modelviewer,model-viewer: exemplos de AR,Google / model-viewer,,https://modelviewer.dev/examples/augmentedreality/,2026-10-31,,,Leitura gratuita
+scene,Scene Viewer no Android,Google / ARCore,,https://developers.google.com/ar/develop/scene-viewer,2026-10-31,,,Leitura gratuita
+quicklook,Quick Look: galeria e AR,Apple Developer,,https://developer.apple.com/quick-look-gallery/,2026-10-31,,,Leitura gratuita
+checkout,Checkout hospedado: integração,Stripe,,https://docs.stripe.com/payments/checkout,2026-10-31,,,Leitura gratuita
+billingtest,Testes de cobrança recorrente,Stripe,,https://docs.stripe.com/billing/testing,2026-10-31,,,Leitura gratuita
+billing,Assinatura com Checkout,Stripe,,https://docs.stripe.com/billing/quickstart,2026-10-31,,,Leitura gratuita
+tests,Playwright: primeiros testes,Playwright / Microsoft,,https://playwright.dev/docs/intro,2026-10-31,,,Leitura gratuita
+zotero,Zotero: guia inicial,Zotero,,https://www.zotero.org/support/quick_start_guide,2026-10-31,,,Leitura gratuita
+abnt,Normas e guias de normalização,Sistema Integrado de Bibliotecas / UFES,,https://biblioteca.ufes.br/normalizacao,2026-10-31,,,Leitura gratuita
+inic,INIC: modelo e submissão,UNIVAP / INIC,,https://www.univap.br/inic/submissao_trabalhos.php,2026-10-31,,,Leitura gratuita
