@@ -1,0 +1,411 @@
+{
+  "eyebrow": "MesaAR · laboratório de criação",
+  "headline": "Do prato à realidade aumentada.",
+  "intro": "Construa uma experiência em que o cliente entende a porção, consulta o cardápio e faz um pedido consistente. Explore a captura do prato, o dispositivo móvel e as etapas que levam o modelo 3D à mesa.",
+  "scope": "A cena mostra uma bancada de captura e dispositivos de referência. O prato é um exemplo visual; o cardápio real precisa de modelo, escala e ficha aprovados pelo restaurante. A vista desmontada do telefone é didática e não exige abrir um aparelho. AR e pagamento dependem das integrações e dos testes do produto.",
+  "stats": [
+    {
+      "value": "8",
+      "label": "etapas práticas"
+    },
+    {
+      "value": "GLB / USDZ",
+      "label": "assets de visualização"
+    },
+    {
+      "value": "Escala",
+      "label": "conferida no prato real"
+    }
+  ],
+  "steps": [
+    {
+      "id": "etapa-1",
+      "title": "Escolha uma unidade e um prato piloto",
+      "kicker": "Recortar",
+      "body": "Faça um prato atravessar o fluxo inteiro antes de digitalizar o cardápio. A informação aprovada pela cozinha é a referência do produto.",
+      "actions": [
+        "Cadastre restaurante, unidade e mesa de teste. Defina quem pode editar cardápio, alterar disponibilidade e acompanhar pedidos.",
+        "Escolha um preparo que possa ser repetido e fotografado com autorização. Registre nome, porção, preço em centavos, ingredientes e alergênicos fornecidos pela cozinha.",
+        "Meça o prato e a porção apresentada; registre referência física para conferir escala posteriormente.",
+        "Desenhe o percurso QR/link → ficha → 3D/AR → sacola → revisão → confirmação. A experiência deve funcionar mesmo sem suporte a AR."
+      ],
+      "check": "Existe uma ficha aprovada, uma referência de escala e um pedido de teste definido.",
+      "parts": [
+        "dish",
+        "workstation",
+        "capture_display"
+      ]
+    },
+    {
+      "id": "etapa-2",
+      "title": "Prepare a bancada de captura",
+      "kicker": "Fotografar",
+      "body": "A geometria e a textura dependem de imagens consistentes. Mantenha o preparo estável e evite mudanças de luz durante a série.",
+      "actions": [
+        "Posicione prato, tripé e iluminação difusa. Preserve textura, cor e detalhes do alimento; evite sombras duras e reflexos que mudem a cada foto.",
+        "Mantenha foco, exposição e balanço de branco consistentes. Capture ângulos sobrepostos em alturas diferentes para cobrir as superfícies visíveis.",
+        "Se usar mesa giratória, planeje a máscara do fundo estático no processamento. A câmera e o prato precisam oferecer informações coerentes para a reconstrução.",
+        "Registre câmera, distância aproximada, condições e referência de dimensão. Guarde os arquivos originais e descarte fotos tremidas ou mudanças do preparo."
+      ],
+      "check": "A série cobre o prato com nitidez e contexto suficiente para reconstrução e comparação visual.",
+      "parts": [
+        "capture_frame",
+        "tripod",
+        "light",
+        "turntable",
+        "dish"
+      ]
+    },
+    {
+      "id": "etapa-3",
+      "title": "Reconstrua e limpe o modelo",
+      "kicker": "Modelar",
+      "body": "Use fotogrametria ou modelagem a partir das imagens, conforme a ferramenta disponível. O objetivo é uma representação fiel o bastante para a finalidade do cardápio.",
+      "actions": [
+        "Importe as fotos e confira alinhamento antes de gerar a malha. Trate fundo, suportes e pontos isolados sem alterar a aparência da porção.",
+        "No Blender, revise malha, orientação, normais e materiais. Reduza detalhes que pesam no celular, preservando silhueta e características importantes.",
+        "Aplique a escala a partir da medida real e organize a origem sobre a superfície de apoio. Guarde o projeto de edição separado do arquivo de distribuição.",
+        "Compare o modelo com o preparo aprovado. Uma textura convincente não corrige um volume ou uma escala errados."
+      ],
+      "check": "A cozinha aprova a aparência e a dimensão do modelo; a equipe registra a versão revisada.",
+      "parts": [
+        "dish",
+        "workstation"
+      ]
+    },
+    {
+      "id": "etapa-4",
+      "title": "Exporte e verifique em dispositivos reais",
+      "kicker": "Preparar assets",
+      "body": "Um arquivo que abre no computador ainda precisa ser validado no celular. Controle peso, material e escala em cada caminho de visualização.",
+      "actions": [
+        "Exporte GLB para o visualizador web e prepare USDZ quando o fluxo de iOS exigir arquivo próprio. Confira materiais e texturas após a exportação.",
+        "Use nomes versionados e registre dimensões em metros, tamanho, checksum e autoria do asset.",
+        "Teste no navegador com rotação, zoom e carregamento. Inclua imagem alternativa e mensagem útil quando o 3D falhar.",
+        "Registre aparelho, sistema, navegador e resultado em matriz_dispositivos.csv. O glTF didático do kit é um ponto de estudo, não o modelo de um prato comercial real."
+      ],
+      "check": "A mesma revisão abre nos dispositivos escolhidos sem perder materiais ou escala.",
+      "parts": [
+        "capture_display",
+        "capture_board",
+        "workstation"
+      ]
+    },
+    {
+      "id": "etapa-5",
+      "title": "Integre 3D e realidade aumentada",
+      "kicker": "Visualizar na mesa",
+      "body": "A visualização em página e a experiência AR têm capacidades diferentes. Explique a transição e preserve um caminho utilizável para todos os clientes.",
+      "actions": [
+        "Integre model-viewer com câmera controlável e modo AR compatível. Use HTTPS e teste o comportamento no contexto real de abertura pelo QR.",
+        "No Android, confira os aparelhos suportados e o caminho Scene Viewer/WebXR escolhido. No iOS, valide Quick Look com o asset disponibilizado.",
+        "Quando a finalidade exigir comparação de porção, mantenha escala fixa e faça conferência lado a lado com a referência física.",
+        "Não dependa de botões HTML da página dentro de visualizadores nativos: Scene Viewer e Quick Look têm interfaces próprias. Ao voltar, mantenha ficha e sacola."
+      ],
+      "check": "O usuário consegue visualizar, retornar ao cardápio e continuar o pedido sem perder contexto.",
+      "parts": [
+        "capture_frame",
+        "capture_display",
+        "dish"
+      ]
+    },
+    {
+      "id": "etapa-6",
+      "title": "Faça o pedido obedecer ao servidor",
+      "kicker": "Regras do domínio",
+      "body": "Preço, disponibilidade e unidade são decisões do servidor. O navegador envia intenção de compra, e a API devolve o pedido validado.",
+      "actions": [
+        "Modele Restaurant, Unit, Table, Dish, Ingredient, Allergen, ModelAsset, Cart, Order e OrderItem com vínculos explícitos.",
+        "Envie identificador do item e quantidade. Recalcule preço e total com o cardápio vigente; não aceite o preço enviado pelo cliente como autoridade.",
+        "Guarde no pedido uma fotografia dos valores e descrições confirmados para preservar seu histórico quando o menu mudar.",
+        "Execute validar_pedido.js: o exercício demonstra recalcular o valor e deduplicar eventos, sem iniciar cobrança real."
+      ],
+      "check": "Alterar o preço no navegador não altera o total validado, e um item indisponível é recusado.",
+      "parts": [
+        "capture_display",
+        "workstation"
+      ],
+      "code": {
+        "language": "bash",
+        "text": "cd materiais\nnode validar_pedido.js"
+      }
+    },
+    {
+      "id": "etapa-7",
+      "title": "Integre confirmação e operação",
+      "kicker": "Pilotar o fluxo",
+      "body": "Use o ambiente de testes do provedor escolhido antes de qualquer cobrança. Pedido do cliente e assinatura do restaurante são processos separados.",
+      "actions": [
+        "Crie a sessão de pagamento no servidor a partir do pedido validado. Use identificadores para relacionar pedido, tentativa e evento recebido.",
+        "Confirme o estado por evento autenticado do provedor ou consulta validada, conforme sua documentação. Não marque pago apenas porque o navegador voltou a uma página de sucesso.",
+        "Deduplicate eventos e implemente transições consistentes. Teste cancelamento, falha, confirmação atrasada e evento recebido novamente.",
+        "Na operação, mostre pedidos e estados da cozinha; permita alterar disponibilidade com autorização por unidade. Registre decisões e histórico."
+      ],
+      "check": "Um evento repetido não duplica pedido nem confirmação, e o estado observado na cozinha corresponde ao servidor.",
+      "parts": [
+        "capture_display",
+        "workstation"
+      ]
+    },
+    {
+      "id": "etapa-8",
+      "title": "Homologue a experiência no restaurante",
+      "kicker": "Entregar",
+      "body": "Teste com pessoas executando tarefas reais e observe onde elas param. A experiência envolve conteúdo, dispositivo, conexão e operação.",
+      "actions": [
+        "Meça abertura pelo QR, carregamento do modelo, compreensão da porção e conclusão do pedido. Registre aparelho e rede usados.",
+        "Teste sem AR, sem câmera autorizada, com rede lenta, item indisponível e tentativa de pedido em unidade errada.",
+        "Confira textos da cozinha, ingredientes, alergênicos, preço e escala após cada atualização de asset ou cardápio.",
+        "Entregue projetos de modelagem, arquivos publicados, matriz de dispositivos, contratos da API e evidências do piloto. Descreva quais integrações estão implementadas e quais permanecem propostas."
+      ],
+      "check": "O cardápio funciona com e sem AR, e a equipe consegue atualizar um prato mantendo a rastreabilidade.",
+      "parts": [
+        "capture_display",
+        "dish",
+        "workstation"
+      ]
+    }
+  ],
+  "components": [
+    {
+      "name": "Celular de captura/teste",
+      "model": "iPhone 15 como referência externa do modelo 3D",
+      "quantity": "1",
+      "role": "Fotografia e teste do percurso iOS.",
+      "selection": "O aparelho do piloto pode variar; registrar sistema e formato.",
+      "sourceUrl": "https://support.apple.com/pt-br/111831",
+      "sourceLabel": "Especificações Apple"
+    },
+    {
+      "name": "Aparelho Android",
+      "model": "Dispositivo compatível com o caminho AR escolhido",
+      "quantity": "1 para homologação",
+      "role": "Validar Scene Viewer ou WebXR.",
+      "selection": "Conferir lista oficial e recursos do modelo real.",
+      "sourceUrl": "https://developers.google.com/ar/devices",
+      "sourceLabel": "Dispositivos ARCore"
+    },
+    {
+      "name": "Estação de criação",
+      "model": "Computador com ferramenta de reconstrução e Blender",
+      "quantity": "1",
+      "role": "Preparar malha, textura, escala e exportação.",
+      "selection": "Dimensionar pelo conjunto de fotos e complexidade.",
+      "sourceUrl": "https://docs.blender.org/manual/en/5.3/addons/scene_gltf2.html",
+      "sourceLabel": "Exportação glTF no Blender"
+    },
+    {
+      "name": "Captura",
+      "model": "Tripé e iluminação difusa",
+      "quantity": "1 conjunto",
+      "role": "Fotos consistentes e nítidas.",
+      "selection": "Ajustar ao prato real; registrar configuração.",
+      "sourceUrl": "https://developer.apple.com/augmented-reality/object-capture/",
+      "sourceLabel": "Object Capture Apple"
+    },
+    {
+      "name": "Mesa giratória",
+      "model": "Suporte rotativo de captura",
+      "quantity": "Opcional",
+      "role": "Facilitar série de ângulos do prato.",
+      "selection": "Planejar mascaramento do fundo e estabilidade do preparo.",
+      "sourceUrl": "https://developer.apple.com/augmented-reality/object-capture/",
+      "sourceLabel": "Captura e reconstrução"
+    },
+    {
+      "name": "Referência física",
+      "model": "Prato, preparo e régua de medição",
+      "quantity": "Por item",
+      "role": "Aprovação de aparência e escala.",
+      "selection": "Ficha, porção e dimensões confirmadas pela cozinha.",
+      "sourceUrl": "https://modelviewer.dev/examples/augmentedreality/",
+      "sourceLabel": "Escala e apresentação AR"
+    },
+    {
+      "name": "Acesso à mesa",
+      "model": "QR Code com URL de unidade e mesa",
+      "quantity": "Por mesa",
+      "role": "Abrir o cardápio correto no celular.",
+      "selection": "A API valida unidade e mesa; o QR não é uma autorização de edição.",
+      "sourceUrl": "../docs/tecnologias.md",
+      "sourceLabel": "Tecnologias propostas"
+    }
+  ],
+  "connections": [
+    {
+      "to": "Série de fotografias",
+      "protocol": "Captura óptica",
+      "detail": "Imagens originais, referência de escala e condições registradas.",
+      "type": "optical",
+      "from": "Prato real + câmera"
+    },
+    {
+      "to": "Estação de modelagem",
+      "protocol": "Arquivos de origem",
+      "detail": "Reconstrução, limpeza, materiais e revisão.",
+      "type": "data",
+      "from": "Fotografias"
+    },
+    {
+      "to": "GLB / USDZ",
+      "protocol": "Exportação versionada",
+      "detail": "Dimensões, autoria, checksum e validação de materiais.",
+      "type": "data",
+      "from": "Projeto revisado"
+    },
+    {
+      "to": "Celular",
+      "protocol": "HTTPS · modelo e ficha",
+      "detail": "Entrega do asset aprovado para a unidade correta.",
+      "type": "network",
+      "from": "Armazenamento / CDN"
+    },
+    {
+      "to": "Visualizador AR",
+      "protocol": "WebXR / Scene Viewer / Quick Look",
+      "detail": "Caminho dependente do dispositivo; manter alternativa sem AR.",
+      "type": "data",
+      "from": "Celular"
+    },
+    {
+      "to": "API de pedidos",
+      "protocol": "HTTPS · itens e quantidades",
+      "detail": "Servidor recalcula preço e confere disponibilidade e unidade.",
+      "type": "network",
+      "from": "Sacola"
+    },
+    {
+      "to": "Servidor do pedido",
+      "protocol": "Evento autenticado",
+      "detail": "Confirmação validada e idempotente; o navegador não decide o pagamento.",
+      "type": "network",
+      "from": "Provedor de pagamento"
+    },
+    {
+      "to": "Painel da cozinha",
+      "protocol": "Estado de operação",
+      "detail": "Histórico e autorização por unidade.",
+      "type": "network",
+      "from": "Pedido confirmado"
+    }
+  ],
+  "stack": [
+    {
+      "name": "Blender + glTF / USDZ",
+      "role": "Modelagem, escala e assets para distribuição.",
+      "href": "https://docs.blender.org/manual/en/5.3/addons/scene_gltf2.html"
+    },
+    {
+      "name": "model-viewer",
+      "role": "Visualização 3D e entrada em AR.",
+      "href": "https://modelviewer.dev/examples/augmentedreality/"
+    },
+    {
+      "name": "React + TypeScript",
+      "role": "Cardápio, ficha, sacola e área de operação.",
+      "href": "https://react.dev/"
+    },
+    {
+      "name": "NestJS + PostgreSQL / Prisma",
+      "role": "Regras de preço, pedidos e unidades.",
+      "href": "https://docs.nestjs.com/"
+    },
+    {
+      "name": "S3 compatível + CDN",
+      "role": "Armazenamento de assets aprovados e versionados.",
+      "href": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-presigned-url.html"
+    }
+  ],
+  "deliverables": [
+    "Ficha real aprovada e modelo com escala conferida.",
+    "Projeto de edição e arquivos GLB/USDZ versionados.",
+    "Cardápio funcional com alternativa sem AR.",
+    "API de pedidos com preço calculado no servidor.",
+    "Fluxo de pagamento em testes e operação demonstrável.",
+    "Matriz de dispositivos e resultados do piloto."
+  ],
+  "checks": [
+    "A porção 3D corresponde à ficha aprovada pela cozinha.",
+    "Escala é conferida em uma referência física.",
+    "A navegação continua quando o aparelho não suporta AR.",
+    "Preço informado pelo navegador não substitui o preço do servidor.",
+    "Eventos repetidos não duplicam pedido ou confirmação."
+  ],
+  "references": [
+    {
+      "title": "model-viewer · realidade aumentada",
+      "url": "https://modelviewer.dev/examples/augmentedreality/",
+      "why": "Modos de AR, HTTPS, escala e limites das interfaces nativas."
+    },
+    {
+      "title": "Google · aparelhos ARCore",
+      "url": "https://developers.google.com/ar/devices",
+      "why": "Verificação do dispositivo Android real."
+    },
+    {
+      "title": "Apple · AR Quick Look",
+      "url": "https://developer.apple.com/quick-look-gallery/",
+      "why": "Visualização de objetos USDZ no ecossistema Apple."
+    },
+    {
+      "title": "Blender · glTF 2.0",
+      "url": "https://docs.blender.org/manual/en/5.3/addons/scene_gltf2.html",
+      "why": "Malhas, materiais e exportação para distribuição."
+    },
+    {
+      "title": "Apple · iPhone 15",
+      "url": "https://support.apple.com/pt-br/111831",
+      "why": "Referência externa do telefone da cena."
+    },
+    {
+      "title": "Amazon S3 · acesso temporário",
+      "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-presigned-url.html",
+      "why": "Organização e acesso controlado aos arquivos."
+    }
+  ],
+  "faq": [
+    {
+      "q": "O prato do modelo já pode entrar no cardápio real?",
+      "a": "Ele é um exemplo visual. Para publicar um item real, capture o preparo, confira escala e aparência e obtenha aprovação da cozinha para a ficha e o asset."
+    },
+    {
+      "q": "Todo celular consegue abrir AR?",
+      "a": "O suporte depende do aparelho, sistema, navegador e modo usado. Verifique a matriz de testes; a ficha e o pedido precisam funcionar sem AR."
+    },
+    {
+      "q": "O modelo precisa ter o tamanho correto?",
+      "a": "Sim, quando a proposta é ajudar a entender a porção. Registre medidas físicas e confira a escala exportada no aparelho antes de publicar."
+    },
+    {
+      "q": "O exemplo já faz cobrança?",
+      "a": "Não. validar_pedido.js roda localmente com dados sintéticos. O produto precisa integrar o provedor escolhido no servidor, primeiro no ambiente de testes."
+    }
+  ],
+  "downloads": [
+    {
+      "label": "Kit de estudos",
+      "href": "../materiais/kit-estudos-mesaar.zip",
+      "detail": "Menu e eventos sintéticos, modelo e exercícios."
+    },
+    {
+      "label": "Modelo glTF didático",
+      "href": "../materiais/prato_didatico.gltf",
+      "detail": "Asset de estudo; não é um prato comercial validado."
+    },
+    {
+      "label": "Validador de pedido",
+      "href": "../materiais/validar_pedido.js",
+      "detail": "Preço no servidor e deduplicação de eventos."
+    },
+    {
+      "label": "Matriz de dispositivos",
+      "href": "../materiais/matriz_dispositivos.csv",
+      "detail": "Registre testes de 3D e AR em aparelhos reais."
+    },
+    {
+      "label": "BOM editável",
+      "href": "../materiais/bom.csv",
+      "detail": "Inventário de captura e homologação."
+    }
+  ]
+}

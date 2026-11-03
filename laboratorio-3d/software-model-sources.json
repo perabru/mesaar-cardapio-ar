@@ -1,0 +1,17 @@
+{
+  "authorship": "Geometria procedural original criada para os projetos TCC 2027. Não é CAD de fabricante.",
+  "units": "Aproximadamente 1 unidade para 20 mm nos dispositivos de referência; espaçamento e algumas escalas adaptados para legibilidade.",
+  "limitations": "Interiores de telefones, notebook, armazenamento e câmeras genéricas são representações didáticas. Nenhuma peça é arquivo para fabricação ou instrução de reparo. As curvas representam fluxos lógicos ou ópticos, não pinagens elétricas.",
+  "sources": [
+    {
+      "title": "Apple — iPhone 15: especificações técnicas",
+      "url": "https://support.apple.com/pt-br/111831",
+      "used_for": "Proporção externa: altura 147,6 mm; largura 71,6 mm; espessura 7,80 mm. Nenhum detalhe interno foi tratado como CAD real."
+    },
+    {
+      "title": "model-viewer — realidade aumentada",
+      "url": "https://modelviewer.dev/examples/augmented-reality.html",
+      "used_for": "Distinguir visualização 3D de homologação AR via WebXR, Scene Viewer e Quick Look."
+    }
+  ]
+}
