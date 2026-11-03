@@ -1,0 +1,188 @@
+{
+  "slug": "mesaar-cardapio-ar",
+  "name": "MesaAR",
+  "short": "MesaAR",
+  "domain": "Cardápio com realidade aumentada",
+  "tagline": "Veja à mesa. Escolha com clareza.",
+  "concept": [
+    "A vista superior de um prato encontra os quatro cantos de enquadramento da realidade aumentada. Uma folha central adiciona um gesto humano e gastronômico à geometria da tecnologia.",
+    "O ambiente visual é quente e acolhedor: terracota, creme e verde de ervas. Cartões arredondados, fotografias honestas e títulos suaves ajudam a escolher sem sobrecarregar a experiência."
+  ],
+  "personality": [
+    "Acolhedor",
+    "Apetitoso",
+    "Claro"
+  ],
+  "colors": {
+    "bg": "#FFF6E8",
+    "panel": "#FFFCF6",
+    "ink": "#3D2A22",
+    "muted": "#6E5E4E",
+    "line": "#D8C6AD",
+    "accent": "#AB432B",
+    "second": "#52683B",
+    "paper": "#FFF6E8",
+    "dark": "#3D2A22"
+  },
+  "palette": [
+    {
+      "name": "Terracota",
+      "hex": "#AB432B",
+      "role": "Marca, chamadas e botões principais."
+    },
+    {
+      "name": "Creme à mesa",
+      "hex": "#FFF6E8",
+      "role": "Fundo acolhedor e áreas de leitura."
+    },
+    {
+      "name": "Café",
+      "hex": "#3D2A22",
+      "role": "Textos e marca monocromática."
+    },
+    {
+      "name": "Verde ervas",
+      "hex": "#52683B",
+      "role": "Destaques secundários e detalhes gastronômicos."
+    },
+    {
+      "name": "Porcelana",
+      "hex": "#FFFCF6",
+      "role": "Cartões, menus e espaços de respiro."
+    }
+  ],
+  "fonts": {
+    "display": "Outfit",
+    "body": "Nunito Sans",
+    "mono": "JetBrains Mono"
+  },
+  "motif": "Pratos circulares, enquadramento AR e cantos acolhedores.",
+  "graphic_rules": [
+    "Usar círculos e cantos de 16 a 24 px em cartões digitais.",
+    "Manter preço, porção e descrição próximos da imagem do prato.",
+    "Usar o enquadramento AR como detalhe de interface, sem cobrir a comida.",
+    "Usar fotos com luz natural, escala coerente e cores próximas do produto real."
+  ],
+  "voice": {
+    "do": [
+      "Descrever preparo e porção com clareza.",
+      "Explicar quando a visualização for ilustrativa.",
+      "Diferenciar pedido, pagamento e assinatura do restaurante."
+    ],
+    "dont": [
+      "Prometer tamanho exato sem calibração.",
+      "Omitir informações relevantes do alimento.",
+      "Confundir demonstração de pagamento com transação real."
+    ],
+    "example": "Explore o prato em 3D e confira os ingredientes antes de escolher."
+  },
+  "applications": [
+    "Card de prato com foto, nome, preço e atalho para visualização AR.",
+    "Cardápio impresso com QR code e chamada curta.",
+    "Tela de restaurante com informações de preparo e navegação simples."
+  ],
+  "cautions": [
+    "A representação em 3D deve comunicar se a escala foi validada ou se é ilustrativa.",
+    "Disponibilidade, ingredientes e valores devem ser confirmados pelo restaurante."
+  ],
+  "version": "1.0",
+  "year": 2027,
+  "created": "2026-11-03",
+  "logo": {
+    "concept": "Um prato visto de cima, com uma folha central, é envolvido pelos quatro cantos do enquadramento AR.",
+    "grid": "Módulo de 100 × 100 unidades. Prato central de raio 25; enquadramento entre 12 e 88; traço nominal de 5 unidades; cantos abertos de 15 unidades.",
+    "clear_space": "1x em todos os lados; x = 10 unidades do símbolo de 100 × 100. A área externa de proteção não está incluída no arquivo.",
+    "min_width_print_mm": 40,
+    "min_width_digital_px": 180,
+    "symbol_min_px": 32,
+    "symbol_min_print_mm": 10,
+    "unit": 10,
+    "symbol_viewbox": [
+      0,
+      0,
+      100,
+      100
+    ],
+    "positive_colors": [
+      "#AB432B",
+      "#52683B"
+    ],
+    "negative_colors": [
+      "#FFF6E8",
+      "#EBC8A2"
+    ],
+    "horizontal_viewbox": [
+      0,
+      0,
+      304.64,
+      100
+    ],
+    "files": [
+      "assets/marca-horizontal.svg",
+      "assets/marca-negativa.svg",
+      "assets/marca-monocromatica.svg",
+      "assets/marca-vertical.svg",
+      "assets/simbolo.svg",
+      "assets/simbolo-negativo.svg",
+      "assets/simbolo-monocromatico.svg",
+      "assets/padrao.svg"
+    ],
+    "color_rules": "A versão positiva usa #AB432B e #52683B sobre #FFF6E8. A versão negativa usa #FFF6E8 e #EBC8A2 sobre #3D2A22. Essas variantes são específicas da marca; não substituir as cores por aproximação. A versão monocromática usa uma única tinta, #3D2A22."
+  },
+  "font_files": {
+    "display_regular": "fontes/outfit-regular.ttf",
+    "display_bold": "fontes/outfit-bold.ttf",
+    "body_regular": "fontes/nunito-sans-regular.ttf",
+    "body_bold": "fontes/nunito-sans-bold.ttf",
+    "mono_regular": "fontes/jetbrains-mono-regular.ttf"
+  },
+  "font_web_files": {
+    "display": "fontes/outfit.woff",
+    "body": "fontes/nunito-sans.woff",
+    "mono": "fontes/jetbrains-mono.woff"
+  },
+  "contrast_pairs": [
+    {
+      "label": "Texto principal",
+      "foreground": "#3D2A22",
+      "background": "#FFF6E8",
+      "ratio": 12.62,
+      "minimum": 4.5
+    },
+    {
+      "label": "Texto em painel",
+      "foreground": "#3D2A22",
+      "background": "#FFFCF6",
+      "ratio": 13.21,
+      "minimum": 4.5
+    },
+    {
+      "label": "Texto secundário",
+      "foreground": "#6E5E4E",
+      "background": "#FFF6E8",
+      "ratio": 5.81,
+      "minimum": 4.5
+    },
+    {
+      "label": "Chamada principal",
+      "foreground": "#FFF6E8",
+      "background": "#AB432B",
+      "ratio": 5.49,
+      "minimum": 4.5
+    },
+    {
+      "label": "Link de destaque",
+      "foreground": "#AB432B",
+      "background": "#FFF6E8",
+      "ratio": 5.49,
+      "minimum": 4.5
+    }
+  ],
+  "font_weights": {
+    "display_regular": 400,
+    "display_bold": 700,
+    "body_regular": 400,
+    "body_bold": 700,
+    "mono_regular": 400
+  }
+}
